@@ -1,0 +1,753 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,900;1,300;1,400;1,500&display=swap');
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+:root{
+    --color-blue:rgb(46,103,248);
+    --color-blue-lite:rgb(90, 121, 201);
+    --color-pr:rgb(255,103,0);
+    --color-white : white ;
+    --color-gray :rgb(225, 225, 225);
+    --color-black : #000;
+
+    --container-screnn-lg:90%;
+    --container-screnn-md:93%;
+    --container-screnn-sm:95%;
+
+    --padding:1.3rem;
+
+    
+}
+
+img {
+    background-color: rgb(208, 208, 208);
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+.margin{
+    margin:5rem 0rem;
+}
+
+body{
+  
+    position: relative;
+    padding: 0.6rem;
+    background-color: var(--color-white);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+h4{
+
+}
+.container{
+    width: var(--container-screnn-lg);
+    margin: auto;
+    padding: 1rem;
+}
+.navbar{
+   position: fixed;
+   background-color: transparent;
+   border-radius: 0px 0px 3rem 3rem;
+   width: 98.5%;
+   z-index: 999;
+   top: 0;
+}
+.navbar.backg{
+    background-color: var(--color-blue);
+}
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative ;
+}
+
+.shop , .burger{
+    display: none;
+
+}
+
+.nav_container .left img{
+    width: 100px;
+}
+.nav_container .right ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.right ul li {
+    margin-left: 1rem ;
+}
+
+.right .active{
+    background-color: var(--color-blue-lite);
+}
+
+.right ul li a {
+    color:var(--color-white);
+    padding: 0.6rem;
+    border:none;
+    border-radius: 1.2rem;
+}
+.right ul li a:hover{
+    background-color:var(--color-blue-lite);
+}
+.right .sing{
+    background-color:var(--color-pr);
+    text-transform: uppercase;
+}
+
+
+/******************************** start header *********************** */
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding-top: 7rem;
+    height: auto;
+    border-radius: 0px 0px 5rem 5rem;
+    background-image: url(/images/banner-bg.jpg);
+}
+.header_container{
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.header_container .left{
+    padding: 1rem;
+    color: white;
+}
+.header_container .left h4{
+
+}
+.header_container .left  h1{
+   margin: 2rem 0rem;
+}
+.header_container .left p{
+    margin: 2rem  0rem ;
+}
+
+.header_container .form{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    border-radius: 1rem;
+    width: 80%;
+    padding: 0px 0px 0px 1rem;
+}
+.header_container .form input{
+    border: none;
+    padding-inline:1.3rem;
+}
+
+.header_container .form div{
+   background-color: var(--color-pr);
+   height: 100%;
+   border-radius: 0px 1rem 1rem 0px;
+   font-size: 1rem;
+   padding: 0px 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.header_container .right{
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
+.header_container article{
+    position: relative;
+    width: 350px;
+    height: 400px;
+}
+
+.header_container article img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  height: 250px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header_container .prise{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 111;
+    background-color: var(--color-blue);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: var(--color-white);
+    font-size: 1.2rem
+
+}
+.header_container .offre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-pr);
+    color: var(--color-white);
+    font-size: 1.5rem;
+
+}
+
+
+
+/******************************** end header *********************** */
+/******************************** start type *********************8 */ 
+.type_container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 3rem;
+}
+.type_container article{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 3rem;
+    border-radius: 1rem;
+
+    box-shadow: 0px 0px 40px 0px rgb(153, 153, 153);
+}
+.type_container img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-pr);
+    padding:0.7rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.type_container img:hover{
+    background-color: var(--color-blue);
+}
+.type_container h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/******************************** end type **********************/
+/******************************* start tranding *******************/
+.container .title{
+  color: var(--color-pr);
+}
+.trending_container .show{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.show h3{
+    margin:1rem 0rem;
+}
+button{
+    background-color: var(--color-pr);
+    padding: 1rem;
+    color:var(--color-white);
+    font-size: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+}
+.trs{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 3rem;
+   margin: 3rem;
+}
+
+.game_trende{
+    position: relative;
+    box-shadow: 0px 0px 10px 5px rgb(229, 229, 229);
+    border-radius: 1rem;
+}
+.game_trende img{
+    width: 100%;
+    border-radius: 1rem;
+
+}
+
+.game_trende  .price{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    background-color: var(--color-blue);
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 5px;
+    border-radius:1rem;
+}
+.game_title{
+    position: relative;
+    padding:1rem 1rem;
+}
+.game_title p{
+   color: var(--color-gray);
+}
+.game_title i{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-pr);
+}
+
+
+/******************************* end tranding *******************/
+/******************************* start category *******************/
+
+.category_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.games_categorie{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    gap: 1rem;
+}
+.cat_game{
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 0px gray;
+    text-align:center;
+    background-color:var(--color-blue);
+}
+.cat_game p {
+    margin: 1rem 0px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;}
+.cat_game img{
+    width: 100%;
+    height: 60%;
+    border: none;
+}
+
+
+/******************************* end category *******************/
+/****************************** start shop *********************/
+.shops{
+    position: relative;
+    margin: 10rem 0rem;
+    padding: 4rem 0rem
+}
+.shop_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.shops img{
+    width: 70%;
+    border: none;
+    border-radius: 2rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.shops .cart{
+    background-color: var(--color-gray);
+    padding:2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 2.5rem ;
+    width: 30%;
+}
+.shops .cart span{
+    color: var(--color-blue);
+}
+.shops .one{
+    border: none;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-radius: 1.4rem;
+    margin: 0.5rem 0rem;
+    width: 100%;
+}
+.shops .cart h4{
+    color: var(--color-pr);
+    margin: 1rem;
+}
+
+.shops .cart h1{
+    margin: 1rem;
+}
+.shops .cart p{
+    margin: 1rem;
+}
+.shops button:hover{
+  background-color: var(--color-blue);
+}
+
+/****************************** end shop *********************/
+/******************************start footer ******************/
+footer{
+    background-image: url(/images/footer-bg.jpg);
+    padding: 2rem;border-radius: 2rem 2rem 0rem 0rem;
+    border: none;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+
+}
+/******************************end footer ******************/
+
+
+/*------------------------------contanct ------------------------*/
+/****************************** header  **************************/
+.contact{
+    height: 60vh;
+    
+}
+.contact_header{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+/****************************** header  **************************/
+/*****************************body ****************************/
+.body{
+    margin: 5rem 0px;
+}
+.container_body{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+}
+.container_body .left {
+   
+    background-color: var(--color-gray);
+    border-radius:1rem;
+    border: none;
+    padding: 2rem;
+}
+.container_body .left h2{
+    margin: 1rem 0px;
+}
+.container_body .left p{
+    margin: 1rem 0px;
+}
+.ar{
+    padding:0.5rem;
+    margin-top: 1rem;
+}
+
+
+.container_body .right{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.map{
+    margin: 1rem 0px;
+}
+
+
+.container_body .form input ,textarea{
+    width: 48%;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 1.2rem;
+    background-color: var(--color-gray);
+    font-size: 0.8rem;
+    margin: 0.8rem;
+}
+
+.form div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+textarea{width: 100%;}
+
+
+/*****************************body ****************************/
+/*------------------------------contanct ------------------------*/
+
+
+/*------------------------------star poduct ------------------------*/
+.container_product{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+}
+.game{
+    margin: 5rem 0rem;
+}
+.container_product img{
+    width:90%;
+}
+.descrption_game {
+    padding: 3rem 0rem;
+}
+.descrption_game p {
+    margin: 1rem 0px ;
+}
+.cart{
+    display: flex;
+    margin: 3rem 0rem;
+}
+.cart input{
+    width: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.add  {
+    margin-left: 3rem;
+    background-color: var(--color-pr);
+    width: 140px;
+    padding-inline: 0.6rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: wheat;
+}
+table tr{
+    margin: 1rem;
+}
+table tr td:last-child {
+    color: var(--color-blue);
+    padding-left: 2rem;
+}
+
+
+/*------------------------------end  product------------------------*/
+/************************* start show  ***********************/
+.categor_container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.categor_container .title {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-gray);
+    border-radius: 1.3rem;
+    font-weight: 500;
+}
+.categor_container .title:hover{
+    color: white;
+    background-color: var(--color-pr);
+}
+.categor_container .activation {
+    color: white;
+    background-color: var(--color-pr);
+}
+
+.container_pages , .container_pages ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.pages {
+    margin:2rem 0px ;
+}
+.controle , .container_pages ul li {
+    background-color: var(--color-gray);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.pag-ho{
+    color: white;
+    background-color: var(--color-blue);
+}
+.controle:hover , .container_pages ul li:hover{
+    background-color: var(--color-blue);
+    color: white;
+}
+.hide{
+    display: none;
+}
+
+/************************* end show  ***********************/
+
+/********************* media query md secren  *************/
+@media screen and (max-width:760px) {
+    .contianer{
+        width: var(--container-screnn-md);
+    }
+    .navbar{
+        width: 97%;
+    }
+    .burger{display: block;
+    font-size: 2rem;}
+    .nav_container{
+        z-index: 900;
+     }
+    .nav_container .right {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        width:99%;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius:  0px 0px 2rem 2rem;
+        overflow: hidden;
+        transition: all 1s ;
+        z-index: 600;
+    }
+    .nav_container  .menu{
+        top:100%;
+    }
+    .nav_container .right ul {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+       
+    }
+    .nav_container .right ul li{
+        text-align: center;
+        background-color: none;
+        border-radius: none;
+        width: 100%;
+        margin: 1rem ;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--color-gray);
+    }
+    .nav_container .right ul li a {
+        color: black;
+    }
+    .nav_container .right ul li:last-child{
+        border: none;
+    
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+    }
+    .type_container , .trs, .games_categorie{
+        grid-template-columns:  1fr 1fr;
+    }
+    .shop_container img{
+        display: none;
+    }
+    .shop_container{
+        flex-flow: column nowrap;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .shop_container .cart{
+        width: 100%;
+    }
+    .header_container{
+        padding: 3rem 0rem;
+    }
+    .header_container .left{
+      text-align: center;
+    }
+    .header_container .form{
+        width: 100% ;
+        margin-bottom: 4rem
+    };
+
+    .container_product {
+     grid-template-columns: 1fr;
+    }
+    .container_product img {
+        width: 100%;
+    }
+    .container_body{
+        grid-template-columns: 1fr;
+    }
+   
+   
+    .form  input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .contianer{
+        width: var(--container-screnn-sm);
+    }
+    .navbar{
+        width: 95%;
+    }
+    .type_container , .trs, .games_categorie{
+        grid-template-columns:   1fr;
+    }
+
+    .form div{
+       flex-flow: column nowrap;
+    }
+    .container_body{
+        grid-template-columns: 1fr;
+    }
+    
+    .map iframe {
+        width:100%;
+    }
+
+}
+
+
+
